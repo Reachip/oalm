@@ -1,4 +1,6 @@
+extern crate username; 
 extern crate dirs;
+
 use std::ffi::OsString;
 
 pub fn according_os() -> OsString {
@@ -12,7 +14,8 @@ pub fn according_os() -> OsString {
     }
 
     else if cfg!(windows) {
-        OsString::from("C:/Program Files (x86)/Arduino/libraries")
+        let username = username::get_user_name().unwrap(); 
+        OsString::from(format!("C:/Users/{}/Documents/Arduino/libraries/", username))
     }
 
     else {
