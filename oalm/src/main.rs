@@ -6,8 +6,8 @@ use std::process;
 use std::env; 
 use std::fs; 
 
-mod modules; 
-use modules::{download, install, libraries, path};
+mod core; 
+use core::{download, install, libraries, path};
 
 fn main() {
     let app = clap::App::new("Arduino Library Manager")
