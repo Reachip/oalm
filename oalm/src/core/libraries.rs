@@ -2,7 +2,7 @@ use std::ffi::OsString;
 use std::fs;
 use std::io;
 
-use path;
+use core::path;
 
 pub fn create(project_name: &str) -> Result<OsString, io::Error> {
     let parent_directory = path::according_os();

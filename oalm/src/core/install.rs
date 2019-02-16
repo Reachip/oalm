@@ -9,6 +9,7 @@ use std::path::Path;
 
 use std::ffi::{OsStr, OsString};
 
+#[derive(PartialEq, Debug)]
 pub enum Arg {
     IsHttpOrHttps,
     IsGitRepo,
