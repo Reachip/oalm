@@ -112,7 +112,10 @@ fn main() {
                     }
                 }
 
-                _ => () 
+                _ => {
+                    eprintln!("Your input doesn't match with any target to install a Arduino library."); 
+                    process::exit(1);
+                }
             }
         }
             
